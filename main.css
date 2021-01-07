@@ -13,6 +13,7 @@ h1 {
     margin: 0;
     font-family: "Yellowtail", cursive;
     letter-spacing: 4px;
+    font-weight: normal;
 }
 
 p,
@@ -125,9 +126,12 @@ a {
 }
 
 #footer {
-    padding: 50px 10%;
     width: 100vw;
     background-color: #252525;
+}
+
+#footer .wrap {
+    padding: 50px 10%;
 }
 
 #footer p {
@@ -166,6 +170,9 @@ a {
 }
 
 /* 以下comission.htmlのCSS */
+#info {
+    width: 100vw;
+}
 
 #header-comission {
     position: fixed;
