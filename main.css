@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+.show-body {
+    opacity: 1;
+}
+
+h1 {
+    margin: 0;
+    font-family: "Yellowtail", cursive;
+    letter-spacing: 4px;
+}
+
+p,
+a {
+    margin: 0;
+}
+
+#header {
+    position: absolute;
+    color: white;
+    padding: 50px 10%;
+    font-size: 1.5em;
+    text-shadow: 0px 0px 6px rgb(0, 0, 0);
+}
+
+#header-movie {
+    height: 100vh;
+    width: 100vw;
+}
+
+#body {
+    color: white;
+    background-color: #17274d;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+#body h1 {
+    font-size: 4em;
+    letter-spacing: 4px;
+}
+
+.content {
+    margin: 1.5em 0;
+}
+
+#body p {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-size: 1.2em;
+}
+
+#body a {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    display: block;
+}
+
+.animation-text {
+    padding: 150px 10%;
+}
+
+.animation-text h1,
+p,
+a {
+    transform: translateX(60px);
+    opacity: 0;
+    transition: all 0.55s ease-out;
+}
+
+.animation-text .show {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+#body a:hover {
+    transform: translateX(10px);
+}
+
+#work {
+    background-color: white;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+#work h1 {
+    font-size: 4em;
+    letter-spacing: 4px;
+}
+
+.videos {
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+.test {
+    width: 100%;
+    max-width: 360px;
+}
+
+#footer {
+    padding: 50px 10%;
+    background-color: #252525;
+}
+
+#footer p {
+    opacity: 1;
+    transform: translateX(0px);
+    margin: 0;
+    color: white;
+}

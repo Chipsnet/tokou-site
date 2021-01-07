@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="main.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Yellowtail&family=M+PLUS+Rounded+1c:wght@300&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+            rel="preload"
+        />
+
+        <script src="/assets/js/jquery-3.4.1.min.js"></script>
+        <script src="/assets/js/jquery-migrate-1.4.1.min.js"></script>
+        <script src="/assets/js/lity.min.js" defer></script>
+        <script src="/assets/js/jquery.vide.min.js" defer></script>
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@tok0u" />
+        <meta property="og:url" content="https://tok0u.work" />
+        <meta property="og:title" content="Tokou's Portfolio" />
+        <meta
+            property="og:description"
+            content="映像クリエイターとこうのポートフォリオです。"
+        />
+        <meta
+            property="og:image"
+            content="https://i.gyazo.com/4eff87f5a31911cf60d4a7f6c33b60da.jpg"
+        />
+
+        <title>Tokou's Portfolio</title>
+    </head>
+    <body>
+        <section id="header">
+            <h1>Tokou's Portfolio</h1>
+        </section>
+        <section id="header-movie"></section>
+        <section id="body">
+            <div class="animation-text">
+                <h1>About</h1>
+                <div class="content">
+                    <p>
+                        文字を用いたインパクトのある映像を中心に、どこで止めても絵になるようなデザイン性のある映像を制作しています。
+                    </p>
+                    <p>
+                        AfterEffectsとBlenderを使用しています。イラストを用いた制作も可能です。
+                    </p>
+                </div>
+                <a href="https://twitter.com/tok0u" target="_blank">Twitter→</a>
+            </div>
+        </section>
+        <section id="work">
+            <div class="animation-text">
+                <h1>Works</h1>
+                <div class="content">
+                    <p>制作した映像一覧です</p>
+                </div>
+                <div class="videos"></div>
+            </div>
+        </section>
+        <section id="footer">
+            <p>&copy tok0u 2020 / Designed by 巳波みなと</p>
+        </section>
+        <script>
+            const onIntersect = (target, options = {}) => {
+                const observer = new IntersectionObserver(
+                    addShowClass,
+                    options
+                );
+                observer.observe(target);
+            };
+
+            const addShowClass = (entries) => {
+                console.log(entries);
+                for (const e of entries) {
+                    if (e.isIntersecting) {
+                        e.target.classList.add("show");
+                    }
+                }
+            };
+
+            $(() => {
+                $("#header-movie").vide("assets/movie/reel.mp4");
+                $("body").addClass("show-body");
+
+                const options = {
+                    root: null,
+                    rootMargin: "0px 0px 0px",
+                    threshold: 0,
+                };
+
+                $(
+                    ".content > p, .animation-text > a, .animation-text > h1"
+                ).each((index, element) => {
+                    console.log(element);
+                    onIntersect(element, options);
+                });
+
+                $.getJSON("database.json", (videos_list) => {
+                    for (var i in videos_list["works"]) {
+                        console.log(i);
+                        $('.videos').append('<img class="test" src="'+videos_list["works"][i]["img"]+'" style="margin: 5px;"></img>')
+                    }
+                });
+
+                /*
+            for (let index = 0; index < 5; index++) {
+                $('.videos').append('<img class="test" src="https://i.gyazo.com/483e15f8063702be7353adc9d329ca8c.jpg" style="margin: 5px;"></img>')
+            }
+            */
+            });
+        </script>
+    </body>
+</html>
