@@ -21,11 +21,12 @@ a {
 }
 
 #header {
-    position: absolute;
+    position: fixed;
     color: white;
     padding: 50px 10%;
     font-size: 1.5em;
     text-shadow: 0px 0px 6px rgb(0, 0, 0);
+    z-index: 1;
 }
 
 #header-movie {
@@ -94,10 +95,28 @@ a {
     letter-spacing: 4px;
 }
 
+#work p {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-size: 1.2em;
+}
+
 .videos {
     display: flex;
     align-content: space-between;
     flex-wrap: wrap;
+    transform: translateX(60px);
+    opacity: 0;
+    transition: all 0.55s ease-out;
+}
+
+.videos.show {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.videos a {
+    transform: translateX(0px);
+    opacity: 1;
 }
 
 .test {
@@ -107,6 +126,7 @@ a {
 
 #footer {
     padding: 50px 10%;
+    width: 100vw;
     background-color: #252525;
 }
 
@@ -115,4 +135,82 @@ a {
     transform: translateX(0px);
     margin: 0;
     color: white;
+}
+
+#comission {
+    background-color: #0f0f0f;
+    color: white;
+    width: 100vw;
+}
+
+#comission h1 {
+    font-size: 4em;
+    letter-spacing: 4px;
+}
+
+#comission p {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-size: 1.2em;
+}
+
+#comission a {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    display: block;
+}
+
+#comission a:hover {
+    transform: translateX(10px);
+}
+
+/* 以下comission.htmlのCSS */
+
+#header-comission {
+    position: fixed;
+    color: white;
+    padding: 50px 10%;
+    font-size: 1.5em;
+    text-shadow: 0px 0px 6px rgb(0, 0, 0);
+    z-index: 1;
+}
+
+#header-comission a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.55s ease-out;
+}
+
+#header-comission a:hover {
+    color: rgba(255, 255, 255, 0.651);
+}
+
+#info {
+    color: black;
+    background-color: white;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+#info h1 {
+    font-size: 4em;
+    letter-spacing: 4px;
+}
+
+#info p {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-size: 1.2em;
+}
+
+#info h1:nth-child(n+2) {
+    margin-top: 1.5em;
+}
+
+.low {
+    font-size: 0.8em;
+}
+
+.comission-2 {
+    text-align: center;
 }

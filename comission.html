@@ -10,13 +10,6 @@
             href="https://fonts.googleapis.com/css2?family=Yellowtail&family=M+PLUS+Rounded+1c:wght@300&display=swap"
             rel="stylesheet"
         />
-        <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-            crossorigin="anonymous"
-            rel="preload"
-        />
 
         <script src="/assets/js/jquery-3.4.1.min.js"></script>
         <script src="/assets/js/jquery-migrate-1.4.1.min.js"></script>
@@ -39,45 +32,73 @@
         <title>Tokou's Portfolio</title>
     </head>
     <body>
-        <section id="header">
-            <h1>Tokou's Portfolio</h1>
+        <section id="header-comission">
+            <a href="/"><h1>Tokou's Portfolio</h1></a>
         </section>
-        <section id="header-movie"></section>
         <section id="body">
-            <div class="animation-text">
-                <h1>About</h1>
-                <div class="content">
-                    <p>
-                        文字を用いたインパクトのある映像を中心に、どこで止めても絵になるようなデザイン性のある映像を制作しています。
-                    </p>
-                    <p>
-                        AfterEffectsとBlenderを使用しています。イラストを用いた制作も可能です。
-                    </p>
-                </div>
-                <a href="https://twitter.com/tok0u" target="_blank">Twitter→</a>
-            </div>
-        </section>
-        <section id="work">
-            <div class="animation-text">
-                <h1>Works</h1>
-                <div class="content">
-                    <p>制作した映像一覧です</p>
-                </div>
-                <div class="videos"></div>
-            </div>
-        </section>
-        <section id="comission">
             <div class="animation-text">
                 <h1>Comission</h1>
                 <div class="content">
                     <p>
-                        MVやPV、歌ってみたなどを中心とした映像制作依頼を30,000円から承っています。
-                    </p>
-                    <p>
-                        納期や尺、内容によって料金は異なります。また、その他注意事項等もありますので、リンク先の詳細をご確認の上お気軽にお問い合わせください。
+                        以下の詳細をご確認の上、お問い合わせください
                     </p>
                 </div>
-                <a href="./comission.html">詳細→</a>
+        </section>
+        <section id="info">
+            <div class="animation-text">
+                <h1>Price</h1>
+                <div class="content">
+                    <p>
+                        料金は基本<br>
+                        ・納期30日間(通常)/30,000～<br>
+                        ・納期14日間(最短)/40,000～<br>
+                        を目安とさせていただきます（企業・個人問わず）。
+                    </p>
+                    <p>なお、納期や尺により前後する場合がございます。詳しくはお問い合わせください。</p>
+                </div>
+                <h1>Payments</h1>
+                <div class="content">
+                    <p>
+                        原則銀行振込でのお支払いとさせていただきます。
+                    </p>
+                    <p>
+                        ※お振込みの際の手数料はご依頼者様負担とさせていただきます。
+                    </p>
+                </div>
+                <h1>Flow</h1>
+                <div class="content">
+                    <p>
+                        以下の流れに従って依頼を進めさせていただきます。
+                    </p>
+                    <p>
+                        1. 依頼される映像の内容やクオリティの指標となる作例などをお伺いします。
+                    </p>
+                    <p>
+                        2. 大まかなイメージの確認後、料金のお見積りと納期を設定させていただきます。内容に差し支えなければお見積書を作成し、送付させていただきます。
+                    </p>
+                    <p>
+                        3. 作品の制作に移らせていただきます。
+                    </p>
+                    <p>
+                        4. 納期までに作品の進捗を数回送付させていただきます。その際、リテイクが必要な場合はお伝えください。
+                    </p>
+                    <p>
+                        5. ご指摘がない場合「GigaFile便」にて作品を納品させていただきます。<br>
+                        <span class="low">※報酬のお振込みが確認でき次第納品をさせていただく流れになりますので、予めご了承ください。<br>
+                        ※リテイク(手直し)につきましては、こちらのミスを除き、無料で3カ所まで引き受けさせていただきます。3回目以降のリテイクに関しましては、1回につき3,000円を報酬額に加えさせていただきます。<br>
+                        ※リテイクの内容や回数によっては納期を延ばして頂く場合があります。ご了承ください。<br></span>         </p>
+                </div>
+        </section>
+        <section id="comission" class="comission-2">
+            <div class="animation-text">
+                <h1>Contact</h1>
+                <div class="content">
+                    <p>
+                        以上の詳細をご確認の上、ご相談・お見積りをご希望の方は、お気軽にメール又はTwitterのDMよりお問い合わせください！
+                    </p>
+                </div>
+                <a href="https://twitter.com/tok0u" target="_blank">Twitter</a>
+                <a href="mailto:tok0utoko@gmail.com">メール</a>
             </div>
         </section>
         <section id="footer">
@@ -102,7 +123,6 @@
             };
 
             $(() => {
-                $("#header-movie").vide("assets/movie/reel.mp4");
                 $("body").addClass("show-body");
 
                 const options = {
