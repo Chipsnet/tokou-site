@@ -141,6 +141,11 @@ a {
     color: white;
 }
 
+#footer a {
+    color: white !important;
+    opacity: 1!important;
+}
+
 #comission {
     background-color: #0f0f0f;
     color: white;
