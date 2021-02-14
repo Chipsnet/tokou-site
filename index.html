@@ -40,17 +40,17 @@
     </head>
     <body>
         <section id="header">
-            <h1>Tokou's Portfolio</h1>
+            <h1 class="gate-title">Tokou's Portfolio</h1>
         </section>
         <section id="header-movie"></section>
         <section id="body">
             <div class="animation-text">
                 <h1>About</h1>
                 <div class="content">
-                    <p>
+                    <p class="gate-text-1">
                         文字を用いたインパクトのある映像を中心に、どこで止めても絵になるようなデザイン性のある映像を制作しています。
                     </p>
-                    <p>
+                    <p class="gate-text-2">
                         AfterEffectsとBlenderを使用しています。
                     </p>
                 </div>
@@ -82,7 +82,7 @@
         </section>
         <section id="footer">
             <div class="wrap">
-                <p>&copy tok0u 2021 / Designed by <a href="https://twitter.com/minatoo86" target="_blank">巳波みなと</a></p>
+                <p class="gate">&copy tok0u 2021 / Designed by <a href="https://twitter.com/minatoo86" target="_blank">巳波みなと</a></p>
             </div>
         </section>
         <script>
@@ -104,6 +104,12 @@
             };
 
             $(() => {
+                $(".gate").click(function() {
+                    $(".gate-text-1").html('「とこうのうんこ、とこうんこ」を見た。と言えば、依頼料金が99999999999999999999999円オフ！')
+                    $(".gate-text-2").html('便器とトイレットペーパーを使用しています。')
+                    $(".gate-title").html("Tokounko's Portfolio")
+                })
+
                 $("#header-movie").vide("assets/movie/reel.mp4");
                 $("body").addClass("show-body");
 
